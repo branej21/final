@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Request Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container py-5">
+  <h2 class="text-center mb-4">Service Request Form</h2>
+  <form id="serviceRequestForm">
+    
+    <!-- Customer Information -->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="customerName">Full Name</label>
+        <input type="text" class="form-control" id="customerName" name="customerName" required placeholder="Enter your full name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="customerEmail">Email Address</label>
+        <input type="email" class="form-control" id="customerEmail" name="customerEmail" required placeholder="Enter your email">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="customerPhone">Phone Number</label>
+        <input type="tel" class="form-control" id="customerPhone" name="customerPhone" required placeholder="Enter your phone number">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="vehicleModel">Vehicle Model</label>
+        <input type="text" class="form-control" id="vehicleModel" name="vehicleModel" required placeholder="Enter your vehicle model">
+      </div>
+    </div>
+
+    <!-- Service Selection -->
+    <div class="form-group">
+      <label for="serviceType">Select Service Type</label>
+      <select class="form-control" id="serviceType" name="serviceType" required>
+        <option value="" disabled selected>Choose a service</option>
+        <option value="repair">Repair</option>
+        <option value="oilChange">Oil Change</option>
+        <option value="service">Service</option>
+        <option value="wash">Wash</option>
+        <option value="tireChange">Tire Change</option>
+        <option value="brakeCheck">Brake Check</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <!-- Additional Comments -->
+    <div class="form-group">
+      <label for="additionalDetails">Additional Details (Optional)</label>
+      <textarea class="form-control" id="additionalDetails" name="additionalDetails" rows="4" placeholder="Add any additional details about your service request"></textarea>
+    </div>
+
+    <!-- Preferred Date and Time -->
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="preferredDate">Preferred Date</label>
+        <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="preferredTime">Preferred Time</label>
+        <input type="time" class="form-control" id="preferredTime" name="preferredTime" required>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group text-center">
+      <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+    </div>
+
+  </form>
+</div>
+
+<!-- Bootstrap JS & Dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.m

@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #222;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.content-section .info,
+.content-section .image {
+    flex: 1;
+    min-width: 40%; /* For responsive behavior */
+    padding: 2rem;
+}
+
+.content-section .info {
+    background-color: #f4f4f4;
+    border: 5px solid #000000; /* 5px stroke for the info box */
+    border-radius: 10px;
+}
+
+.content-section .info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #f72a1f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content-section .bike-details {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.content-section .bike-details li {
+    margin: 0.5rem 0;
+    padding: 0.2rem 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.content-section .bike-details li strong {
+    color: #222;
+}
+
+.content-section .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Reverse Layout for Alternating Sections */
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .content-section.reverse {
+        flex-direction: column;
+    }
+
+    .content-section .info, .content-section .image {
+        padding: 1rem;
+    }
+}
